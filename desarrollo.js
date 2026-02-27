@@ -36,3 +36,44 @@ function fetchJson (url){
         return r.json()
     })
 }
+
+function filtros(monster,n,m){
+if (monster.cr>=n && monster.hp>=m){
+    return(monster)
+}
+}
+
+function buscar(monsters,tipo,n){
+    monsters.find(m => {if (m.type=tipo && m.cr>=n)
+        return m
+    })
+}
+
+function alguno(monsters){
+    return monsters.some(hasLegendary === true)
+}
+
+function todos(monsters){
+    return monsters.every(m=>{
+        if (Object.keys(m.stats)=6 && m.hp>0 ){
+            return true
+        }
+    })
+}
+
+function agrupartipos(monsters){
+    const clasificacion=monsters.reduce((count,avgCR,maxHP,m)=>{
+        tipo[m.tipo]={
+            count:+1,
+            avgCR:+m.CR,
+            maxHP:maxHP=>{if (maxHP < m.hp){
+                return maxHP=m.hp
+            }}
+        }
+    })
+    
+}
+
+function buckets(){
+    return
+}
